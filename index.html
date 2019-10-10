@@ -1,0 +1,57 @@
+<!--Lucy Yang-->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+</body>
+
+
+<script>
+    num1 = parseInt(prompt("Enter a number."));
+    ops = prompt("Enter a operator. (Ex: -, +, *, /)");
+    num2 = parseInt(prompt("Enter another number"));
+
+
+
+
+    function add() {
+        total = num1 + num2;
+    };
+
+    function subtract() {
+        total = num1 - num2;
+    }
+
+    function mutliply() {
+        total = num1 * num2;
+    }
+
+    function divide() {
+        total = num1 / num2;
+    }
+
+    if (ops == "+") {
+        add();
+        console.log(num1 + ops + num2 + ' = ' + total);
+    } else if (ops == "-") {
+        subtract();
+        console.log(num1 + ops + num2 + ' = ' + total);
+    } else if (ops == "*") {
+        mutliply();
+        console.log(num1 + ops + num2 + ' = ' + total);
+    } else if (ops == "/") {
+        divide();
+        console.log(num1 + ops + num2 + ' = ' + total);
+    } else {
+        console.log("Please enter in an operator. (Ex: -, +, *, /");
+    };
+</script>
+
+
+</html>
