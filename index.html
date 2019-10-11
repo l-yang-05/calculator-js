@@ -3,55 +3,73 @@
 <html>
 
 <head>
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    </rel>
 </head>
 
 <body>
+    <div class="main-container">
+        <h1> JavaScript Calculator</h1>
+        <form>
+            <div class="input-numbers">
+                <input id="num1" onkeypress="isInputNumber(event)" placeholder="Enter a number" type="text" />
+                <input id="num2" onkeypress="isInputNumber(event)" placeholder="Enter a number" type="text" />
+            </div>
+            <div class="operations">
+                <input type="button" value="Additon" onclick="add()" />
+                <input type="button" value="Subtraction" onclick="subtract()" />
+                <input type="button" value="Multiplication" onclick="mutliply()" />
+                <input type="button" value="Division" onclick="divide()" />
+            </div>
+        </form>
+    </div>
 
+    <script>
+        function isInputNumber(evt) {
 
+            var ch = String.fromCharCode(evt.which);
+
+            if (!(/[0-9]/.test(ch))) {
+                evt.preventDefault();
+            }
+
+        }
+
+        let num1, num2;
+
+        function setValues() {
+            num1 = Number(document.getElementById('num1').value);
+            num2 = Number(document.getElementById('num2').value);
+        }
+
+        function add() {
+            setValues()
+            total = num1 + num2;
+            console.log('this works')
+            alert(`The total is ${total}`)
+        };
+
+        function subtract() {
+            setValues()
+            total = num1 - num2;
+            alert(`The total is ${total}`)
+        }
+
+        function mutliply() {
+            setValues()
+            total = num1 * num2;
+            alert(`The total is ${total}`)
+
+        }
+
+        function divide() {
+            setValues()
+            total = num1 / num2;
+            alert(`The total is ${total}`)
+
+        }
+
+    </script>
 </body>
-
-
-<script>
-    num1 = parseInt(prompt("Enter a number."));
-    ops = prompt("Enter a operator. (Ex: -, +, *, /)");
-    num2 = parseInt(prompt("Enter another number"));
-
-
-
-
-    function add() {
-        total = num1 + num2;
-    };
-
-    function subtract() {
-        total = num1 - num2;
-    }
-
-    function mutliply() {
-        total = num1 * num2;
-    }
-
-    function divide() {
-        total = num1 / num2;
-    }
-
-    if (ops == "+") {
-        add();
-        console.log(num1 + ops + num2 + ' = ' + total);
-    } else if (ops == "-") {
-        subtract();
-        console.log(num1 + ops + num2 + ' = ' + total);
-    } else if (ops == "*") {
-        mutliply();
-        console.log(num1 + ops + num2 + ' = ' + total);
-    } else if (ops == "/") {
-        divide();
-        console.log(num1 + ops + num2 + ' = ' + total);
-    } else {
-        console.log("Please enter in an operator. (Ex: -, +, *, /");
-    };
-</script>
-
 
 </html>
