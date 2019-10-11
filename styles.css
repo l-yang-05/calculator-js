@@ -39,6 +39,7 @@ h1{
     height: 30px;
     width: 200px;
     border: none;
+    box-shadow: black 2px 2px 10px;
 }
 
 .operations{
@@ -57,4 +58,5 @@ h1{
     border: transparent;
     color: white;
     background-color: rgb(226, 111, 17); 
+    box-shadow: black 2px 2px 10px;
 }
