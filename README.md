@@ -7,7 +7,7 @@ This application is a calculator that takes in two values and does the necessary
 - HTML: Language used to create website
 - CSS: Styles for website
 - JavaScript: Added the functionality of calculator
-- GitHub Pages(https://pages.github.com/): Deployment of site
+- [GitHub Pages](https://pages.github.com/): Deployment of site
 
 ## Author
 
